@@ -25,11 +25,12 @@ int main(int argc, char** argv) {
 
   std::clock_t start, end;
 
-  int nRuns = 500000;
+  int nRuns = 1e7;
 
   start = std::clock();
 
   for (int i = 0; i < nRuns; i++) {
+    
     top->clk = i % 2;
     top->eval();
     //cout << "out = " << top->out << endl;
